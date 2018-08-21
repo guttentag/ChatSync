@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var messagesTableView: UITableView!
+    let messagesDataSet = MessagesDataSet()
+    var messagesDataSource = [[Message]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,8 @@ class ViewController: UIViewController {
         self.messagesTableView.separatorStyle = .none
         self.messagesTableView.allowsSelection = false
         self.messagesTableView.dataSource = self
+        
+        self.messagesDataSet.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,16 +32,28 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.messagesDataSource[section].count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.messagesDataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MessageTableViewCell.identifier, for: indexPath) as! MessageTableViewCell
         
+        let item = self.messagesDataSource[indexPath.section][indexPath.row]
+        cell.set(item)
+        
         return cell
+    }
+}
+
+extension ViewController: MessagesDateDelegate {
+    func messagesData(_ messages: [[Message]]) {
+        DispatchQueue.main.async {
+            self.messagesDataSource = messages
+            self.messagesTableView.reloadData()
+        }
     }
 }

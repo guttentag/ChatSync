@@ -22,5 +22,17 @@ class MessageTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.boxView.layer.cornerRadius = 4
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.set(Message("", timestamp: 0, sender: "", content: ""))
+    }
+    
+    func set(_ message: Message) {
+        self.contentLabel.text = message.content
+        self.senderLabel.text = message.senderId
+        self.timestampLabel.text = message.timestamp.description
+    }
 
 }

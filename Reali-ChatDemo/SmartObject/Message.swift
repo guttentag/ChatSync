@@ -24,6 +24,18 @@ class Message: NSObject {
         self.senderId = sender
         self.content = text
     }
+    
+    convenience init?(_ dictionary: Dictionary<String,Any>) {
+        guard let idString = dictionary["id"] as? String,
+            let time = dictionary["timestamp"] as? TimeInterval,
+            let sender = dictionary["sender"] as? String,
+            let message = dictionary["content"] as? String
+            else {
+                return nil
+        }
+        
+        self.init(idString, timestamp: time, sender: sender, content: message)
+    }
 }
 
 extension Message: Comparable {

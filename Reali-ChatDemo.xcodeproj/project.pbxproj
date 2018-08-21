@@ -16,6 +16,7 @@
 		016FD07F212C253000E9984A /* Reali_ChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */; };
 		016FD08E212C260E00E9984A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD08D212C260E00E9984A /* Message.swift */; };
 		016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD08F212C2BA300E9984A /* MessagesDataSet.swift */; };
+		016FD092212C58D200E9984A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD091212C58D200E9984A /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		016FD080212C253000E9984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		016FD08D212C260E00E9984A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		016FD08F212C2BA300E9984A /* MessagesDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSet.swift; sourceTree = "<group>"; };
+		016FD091212C58D200E9984A /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				016FD065212C252F00E9984A /* Assets.xcassets */,
 				016FD067212C252F00E9984A /* LaunchScreen.storyboard */,
 				016FD06A212C253000E9984A /* Info.plist */,
+				016FD091212C58D200E9984A /* MessageTableViewCell.swift */,
 			);
 			path = "Reali-ChatDemo";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				016FD061212C252C00E9984A /* ViewController.swift in Sources */,
 				016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */,
 				016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */,
+				016FD092212C58D200E9984A /* MessageTableViewCell.swift in Sources */,
 				016FD08E212C260E00E9984A /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

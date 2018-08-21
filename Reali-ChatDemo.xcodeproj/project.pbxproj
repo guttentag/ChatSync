@@ -14,7 +14,7 @@
 		016FD069212C252F00E9984A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016FD067212C252F00E9984A /* LaunchScreen.storyboard */; };
 		016FD074212C253000E9984A /* Reali_ChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD073212C253000E9984A /* Reali_ChatDemoTests.swift */; };
 		016FD07F212C253000E9984A /* Reali_ChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */; };
-		016FD08E212C260E00E9984A /* message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD08D212C260E00E9984A /* message.swift */; };
+		016FD08E212C260E00E9984A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD08D212C260E00E9984A /* Message.swift */; };
 		016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD08F212C2BA300E9984A /* MessagesDataSet.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		016FD07A212C253000E9984A /* Reali-ChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reali-ChatDemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reali_ChatDemoUITests.swift; sourceTree = "<group>"; };
 		016FD080212C253000E9984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		016FD08D212C260E00E9984A /* message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.swift; sourceTree = "<group>"; };
+		016FD08D212C260E00E9984A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		016FD08F212C2BA300E9984A /* MessagesDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +133,7 @@
 		016FD08C212C257E00E9984A /* SmartObject */ = {
 			isa = PBXGroup;
 			children = (
-				016FD08D212C260E00E9984A /* message.swift */,
+				016FD08D212C260E00E9984A /* Message.swift */,
 				016FD08F212C2BA300E9984A /* MessagesDataSet.swift */,
 			);
 			path = SmartObject;
@@ -273,7 +273,7 @@
 				016FD061212C252C00E9984A /* ViewController.swift in Sources */,
 				016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */,
 				016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */,
-				016FD08E212C260E00E9984A /* message.swift in Sources */,
+				016FD08E212C260E00E9984A /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

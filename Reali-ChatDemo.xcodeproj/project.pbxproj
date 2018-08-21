@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD05E212C252C00E9984A /* AppDelegate.swift */; };
+		016FD061212C252C00E9984A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD060212C252C00E9984A /* ViewController.swift */; };
+		016FD064212C252C00E9984A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016FD062212C252C00E9984A /* Main.storyboard */; };
+		016FD066212C252F00E9984A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016FD065212C252F00E9984A /* Assets.xcassets */; };
+		016FD069212C252F00E9984A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016FD067212C252F00E9984A /* LaunchScreen.storyboard */; };
+		016FD074212C253000E9984A /* Reali_ChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD073212C253000E9984A /* Reali_ChatDemoTests.swift */; };
+		016FD07F212C253000E9984A /* Reali_ChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		016FD070212C253000E9984A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016FD053212C252C00E9984A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 016FD05A212C252C00E9984A;
+			remoteInfo = "Reali-ChatDemo";
+		};
+		016FD07B212C253000E9984A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016FD053212C252C00E9984A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 016FD05A212C252C00E9984A;
+			remoteInfo = "Reali-ChatDemo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016FD05B212C252C00E9984A /* Reali-ChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reali-ChatDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		016FD05E212C252C00E9984A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		016FD060212C252C00E9984A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		016FD063212C252C00E9984A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		016FD065212C252F00E9984A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		016FD068212C252F00E9984A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		016FD06A212C253000E9984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016FD06F212C253000E9984A /* Reali-ChatDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reali-ChatDemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		016FD073212C253000E9984A /* Reali_ChatDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reali_ChatDemoTests.swift; sourceTree = "<group>"; };
+		016FD075212C253000E9984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016FD07A212C253000E9984A /* Reali-ChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reali-ChatDemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reali_ChatDemoUITests.swift; sourceTree = "<group>"; };
+		016FD080212C253000E9984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016FD058212C252C00E9984A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD06C212C253000E9984A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD077212C253000E9984A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016FD052212C252C00E9984A = {
+			isa = PBXGroup;
+			children = (
+				016FD05D212C252C00E9984A /* Reali-ChatDemo */,
+				016FD072212C253000E9984A /* Reali-ChatDemoTests */,
+				016FD07D212C253000E9984A /* Reali-ChatDemoUITests */,
+				016FD05C212C252C00E9984A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		016FD05C212C252C00E9984A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				016FD05B212C252C00E9984A /* Reali-ChatDemo.app */,
+				016FD06F212C253000E9984A /* Reali-ChatDemoTests.xctest */,
+				016FD07A212C253000E9984A /* Reali-ChatDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		016FD05D212C252C00E9984A /* Reali-ChatDemo */ = {
+			isa = PBXGroup;
+			children = (
+				016FD05E212C252C00E9984A /* AppDelegate.swift */,
+				016FD060212C252C00E9984A /* ViewController.swift */,
+				016FD062212C252C00E9984A /* Main.storyboard */,
+				016FD065212C252F00E9984A /* Assets.xcassets */,
+				016FD067212C252F00E9984A /* LaunchScreen.storyboard */,
+				016FD06A212C253000E9984A /* Info.plist */,
+			);
+			path = "Reali-ChatDemo";
+			sourceTree = "<group>";
+		};
+		016FD072212C253000E9984A /* Reali-ChatDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				016FD073212C253000E9984A /* Reali_ChatDemoTests.swift */,
+				016FD075212C253000E9984A /* Info.plist */,
+			);
+			path = "Reali-ChatDemoTests";
+			sourceTree = "<group>";
+		};
+		016FD07D212C253000E9984A /* Reali-ChatDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				016FD07E212C253000E9984A /* Reali_ChatDemoUITests.swift */,
+				016FD080212C253000E9984A /* Info.plist */,
+			);
+			path = "Reali-ChatDemoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		016FD05A212C252C00E9984A /* Reali-ChatDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016FD083212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemo" */;
+			buildPhases = (
+				016FD057212C252C00E9984A /* Sources */,
+				016FD058212C252C00E9984A /* Frameworks */,
+				016FD059212C252C00E9984A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reali-ChatDemo";
+			productName = "Reali-ChatDemo";
+			productReference = 016FD05B212C252C00E9984A /* Reali-ChatDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		016FD06E212C253000E9984A /* Reali-ChatDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016FD086212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemoTests" */;
+			buildPhases = (
+				016FD06B212C253000E9984A /* Sources */,
+				016FD06C212C253000E9984A /* Frameworks */,
+				016FD06D212C253000E9984A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				016FD071212C253000E9984A /* PBXTargetDependency */,
+			);
+			name = "Reali-ChatDemoTests";
+			productName = "Reali-ChatDemoTests";
+			productReference = 016FD06F212C253000E9984A /* Reali-ChatDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		016FD079212C253000E9984A /* Reali-ChatDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016FD089212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemoUITests" */;
+			buildPhases = (
+				016FD076212C253000E9984A /* Sources */,
+				016FD077212C253000E9984A /* Frameworks */,
+				016FD078212C253000E9984A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				016FD07C212C253000E9984A /* PBXTargetDependency */,
+			);
+			name = "Reali-ChatDemoUITests";
+			productName = "Reali-ChatDemoUITests";
+			productReference = 016FD07A212C253000E9984A /* Reali-ChatDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016FD053212C252C00E9984A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Eran Guttentag";
+				TargetAttributes = {
+					016FD05A212C252C00E9984A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					016FD06E212C253000E9984A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 016FD05A212C252C00E9984A;
+					};
+					016FD079212C253000E9984A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 016FD05A212C252C00E9984A;
+					};
+				};
+			};
+			buildConfigurationList = 016FD056212C252C00E9984A /* Build configuration list for PBXProject "Reali-ChatDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 016FD052212C252C00E9984A;
+			productRefGroup = 016FD05C212C252C00E9984A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				016FD05A212C252C00E9984A /* Reali-ChatDemo */,
+				016FD06E212C253000E9984A /* Reali-ChatDemoTests */,
+				016FD079212C253000E9984A /* Reali-ChatDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016FD059212C252C00E9984A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016FD069212C252F00E9984A /* LaunchScreen.storyboard in Resources */,
+				016FD066212C252F00E9984A /* Assets.xcassets in Resources */,
+				016FD064212C252C00E9984A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD06D212C253000E9984A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD078212C253000E9984A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016FD057212C252C00E9984A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016FD061212C252C00E9984A /* ViewController.swift in Sources */,
+				016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD06B212C253000E9984A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016FD074212C253000E9984A /* Reali_ChatDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016FD076212C253000E9984A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016FD07F212C253000E9984A /* Reali_ChatDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		016FD071212C253000E9984A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 016FD05A212C252C00E9984A /* Reali-ChatDemo */;
+			targetProxy = 016FD070212C253000E9984A /* PBXContainerItemProxy */;
+		};
+		016FD07C212C253000E9984A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 016FD05A212C252C00E9984A /* Reali-ChatDemo */;
+			targetProxy = 016FD07B212C253000E9984A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		016FD062212C252C00E9984A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016FD063212C252C00E9984A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		016FD067212C252F00E9984A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016FD068212C252F00E9984A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		016FD081212C253000E9984A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		016FD082212C253000E9984A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		016FD084212C253000E9984A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		016FD085212C253000E9984A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		016FD087212C253000E9984A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reali-ChatDemo.app/Reali-ChatDemo";
+			};
+			name = Debug;
+		};
+		016FD088212C253000E9984A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reali-ChatDemo.app/Reali-ChatDemo";
+			};
+			name = Release;
+		};
+		016FD08A212C253000E9984A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reali-ChatDemo";
+			};
+			name = Debug;
+		};
+		016FD08B212C253000E9984A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A99JXS8G2;
+				INFOPLIST_FILE = "Reali-ChatDemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reali.Reali-ChatDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reali-ChatDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016FD056212C252C00E9984A /* Build configuration list for PBXProject "Reali-ChatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016FD081212C253000E9984A /* Debug */,
+				016FD082212C253000E9984A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016FD083212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016FD084212C253000E9984A /* Debug */,
+				016FD085212C253000E9984A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016FD086212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016FD087212C253000E9984A /* Debug */,
+				016FD088212C253000E9984A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016FD089212C253000E9984A /* Build configuration list for PBXNativeTarget "Reali-ChatDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016FD08A212C253000E9984A /* Debug */,
+				016FD08B212C253000E9984A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 016FD053212C252C00E9984A /* Project object */;
+}

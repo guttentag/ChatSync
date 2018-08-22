@@ -48,6 +48,17 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let message = self.messagesDataSource[section].first else {
+            return nil
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd / MM / yyyy"
+        let date = Date(timeIntervalSince1970: message.timestamp)
+        return dateFormatter.string(from: date)
+    }
 }
 
 extension ViewController: MessagesDateDelegate {
@@ -59,13 +70,5 @@ extension ViewController: MessagesDateDelegate {
                 self.messagesTableView.scrollToRow(at: IndexPath(row: lastSectionSize - 1, section: messages.count - 1), at: .bottom, animated: true)
             }
         }
-//
-//        DispatchQueue.main.async {
-//            let offset = self.messagesTableView.contentSize.height - self.messagesTableView.frame.height
-//            print("HEIGHT \(offset)")
-//            if offset > 0 {
-//                self.messagesTableView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
-//            }
-//        }
     }
 }

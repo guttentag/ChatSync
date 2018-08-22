@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Reali-ChatDemo' do
+target 'ChatSync' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
@@ -9,12 +9,12 @@ target 'Reali-ChatDemo' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 
-  target 'Reali-ChatDemoTests' do
+  target 'ChatSyncTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'Reali-ChatDemoUITests' do
+  target 'ChatSyncUITests' do
     inherit! :search_paths
     # Pods for testing
   end

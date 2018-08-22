@@ -1,0 +1,6 @@
+framework module Pods_ChatSyncTests {
+  umbrella header "Pods-ChatSyncTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

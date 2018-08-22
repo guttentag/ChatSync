@@ -13,19 +13,17 @@ protocol MessagesDateDelegate: class {
 }
 
 class MessagesDataSet {
-//    private var messages: [DailyMessages]
     private var messages: Dictionary<DateRepresentation,[Message]>
     private let queue: DispatchQueue
     weak var delegate: MessagesDateDelegate?
     
     init() {
-//        self.messages = [DailyMessages]()
         self.messages = Dictionary<DateRepresentation,[Message]>()
         self.queue = DispatchQueue(label: "MessagesDataQueue")
     }
     
     func add(_ message: Message, update: Bool = true) {
-        os_log("MESSAGE %{time_t}d", log: Logger.log(.dataSet), type: .debug, message.timestamp)
+        os_log("MESSAGE %{time_t}d", log: Logger.log(.dataSet), type: .debug, Int(message.timestamp))
         self.queue.async {
             let date = DateRepresentation(message.timestamp)
             var daily = self.messages[date] ?? []
@@ -56,24 +54,6 @@ class MessagesDataSet {
         
     }
 }
-
-//private class DailyMessages: Comparable {
-//    private var messages: [Message]
-//    let date: DateRepresentation
-//
-//    init(_ _date: DateRepresentation) {
-//        self.date = _date
-//        self.messages = [Message]()
-//    }
-//
-//    static func <(lhs: DailyMessages, rhs: DailyMessages) -> Bool {
-//        return lhs.date < rhs.date
-//    }
-//
-//    static func ==(lhs: DailyMessages, rhs: DailyMessages) -> Bool {
-//        return lhs.date == rhs.date
-//    }
-//}
 
 private struct DateRepresentation: Hashable, Comparable {
     let day: Int

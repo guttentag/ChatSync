@@ -10,6 +10,7 @@
 		01489BC3212D543100D117F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01489BC2212D543100D117F6 /* GoogleService-Info.plist */; };
 		01489BC6212D602A00D117F6 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489BC5212D602A00D117F6 /* FirebaseWrapper.swift */; };
 		01489BC8212D7E8A00D117F6 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489BC7212D7E8A00D117F6 /* MessagesController.swift */; };
+		01489BCA212D8E9600D117F6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489BC9212D8E9600D117F6 /* Logger.swift */; };
 		016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD05E212C252C00E9984A /* AppDelegate.swift */; };
 		016FD061212C252C00E9984A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD060212C252C00E9984A /* ViewController.swift */; };
 		016FD064212C252C00E9984A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016FD062212C252C00E9984A /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		01489BC2212D543100D117F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01489BC5212D602A00D117F6 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
 		01489BC7212D7E8A00D117F6 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
+		01489BC9212D8E9600D117F6 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		016FD05B212C252C00E9984A /* Reali-ChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reali-ChatDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		016FD05E212C252C00E9984A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016FD060212C252C00E9984A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				016FD067212C252F00E9984A /* LaunchScreen.storyboard */,
 				016FD06A212C253000E9984A /* Info.plist */,
 				016FD091212C58D200E9984A /* MessageTableViewCell.swift */,
+				01489BC9212D8E9600D117F6 /* Logger.swift */,
 			);
 			path = "Reali-ChatDemo";
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */,
 				016FD092212C58D200E9984A /* MessageTableViewCell.swift in Sources */,
 				016FD08E212C260E00E9984A /* Message.swift in Sources */,
+				01489BCA212D8E9600D117F6 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

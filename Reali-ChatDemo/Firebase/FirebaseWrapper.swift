@@ -7,6 +7,7 @@
 //
 
 import FirebaseDatabase
+import os
 
 protocol FirebaseWrapperDelegate: class {
     func firebaseWrapper(_ message: Message)
@@ -24,7 +25,7 @@ class FirebaseWrapper {
         self.delegate = delegate
         self.rootRef.observe(DataEventType.childAdded) { (snapshot) in
             guard let rawData = snapshot.value as? [String: Any], let message = Message(rawData) else {
-                print("FIR add fail for: \(snapshot.value.debugDescription)")
+                os_log("FIR add fail for: %{public}@", log: Logger.log(.firebase), type: .debug, snapshot.value.debugDescription)
                 return
             }
             

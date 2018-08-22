@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import os
 protocol MessagesDateDelegate: class {
     func messagesData(_ messages: [[Message]])
 }
@@ -25,7 +25,7 @@ class MessagesDataSet {
     }
     
     func add(_ message: Message, update: Bool = true) {
-        print("MESSAGE \(message.timestamp)")
+        os_log("MESSAGE %{time_t}d", log: Logger.log(.dataSet), type: .debug, message.timestamp)
         self.queue.async {
             let date = DateRepresentation(message.timestamp)
             var daily = self.messages[date] ?? []

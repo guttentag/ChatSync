@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var messagesTableView: UITableView!
-    let messagesDataSet = MessagesDataSet()
+    var messageController: MessagesController!
     var messagesDataSource = [[Message]]()
     
     override func viewDidLoad() {
@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         self.messagesTableView.allowsSelection = false
         self.messagesTableView.dataSource = self
         
-        self.messagesDataSet.delegate = self
+        self.messageController = MessagesController(self)
+        self.messageController.startObserving()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +55,17 @@ extension ViewController: MessagesDateDelegate {
         DispatchQueue.main.async {
             self.messagesDataSource = messages
             self.messagesTableView.reloadData()
+            if let lastSectionSize = messages.last?.count, lastSectionSize > 0 {
+                self.messagesTableView.scrollToRow(at: IndexPath(row: lastSectionSize - 1, section: messages.count - 1), at: .bottom, animated: true)
+            }
         }
+//
+//        DispatchQueue.main.async {
+//            let offset = self.messagesTableView.contentSize.height - self.messagesTableView.frame.height
+//            print("HEIGHT \(offset)")
+//            if offset > 0 {
+//                self.messagesTableView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
+//            }
+//        }
     }
 }

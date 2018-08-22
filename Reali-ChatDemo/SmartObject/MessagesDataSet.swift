@@ -24,13 +24,22 @@ class MessagesDataSet {
         self.queue = DispatchQueue(label: "MessagesDataQueue")
     }
     
-    func add(_ message: Message) {
+    func add(_ message: Message, update: Bool = true) {
+        print("MESSAGE \(message.timestamp)")
         self.queue.async {
             let date = DateRepresentation(message.timestamp)
             var daily = self.messages[date] ?? []
             daily.append(message)
             self.messages[date] = daily.sorted()
-            self.delegateData()
+            if update {
+                self.delegateData()
+            }
+        }
+    }
+    
+    func add(_ messages: [Message]) {
+        for message in messages {
+            self.add(message, update: message == messages.last)
         }
     }
     

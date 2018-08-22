@@ -7,6 +7,7 @@ target 'Reali-ChatDemo' do
 
   # Pods for Reali-ChatDemo
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'Reali-ChatDemoTests' do
     inherit! :search_paths

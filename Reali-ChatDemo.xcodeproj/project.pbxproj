@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01489BC3212D543100D117F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01489BC2212D543100D117F6 /* GoogleService-Info.plist */; };
+		01489BC6212D602A00D117F6 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489BC5212D602A00D117F6 /* FirebaseWrapper.swift */; };
+		01489BC8212D7E8A00D117F6 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489BC7212D7E8A00D117F6 /* MessagesController.swift */; };
 		016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD05E212C252C00E9984A /* AppDelegate.swift */; };
 		016FD061212C252C00E9984A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FD060212C252C00E9984A /* ViewController.swift */; };
 		016FD064212C252C00E9984A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016FD062212C252C00E9984A /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		01489BC2212D543100D117F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		01489BC5212D602A00D117F6 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
+		01489BC7212D7E8A00D117F6 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		016FD05B212C252C00E9984A /* Reali-ChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reali-ChatDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		016FD05E212C252C00E9984A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016FD060212C252C00E9984A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01489BC4212D600D00D117F6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				01489BC5212D602A00D117F6 /* FirebaseWrapper.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		016FD052212C252C00E9984A = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		016FD05D212C252C00E9984A /* Reali-ChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				01489BC4212D600D00D117F6 /* Firebase */,
 				01489BC2212D543100D117F6 /* GoogleService-Info.plist */,
 				016FD08C212C257E00E9984A /* SmartObject */,
 				016FD05E212C252C00E9984A /* AppDelegate.swift */,
@@ -158,6 +171,7 @@
 			children = (
 				016FD08D212C260E00E9984A /* Message.swift */,
 				016FD08F212C2BA300E9984A /* MessagesDataSet.swift */,
+				01489BC7212D7E8A00D117F6 /* MessagesController.swift */,
 			);
 			path = SmartObject;
 			sourceTree = "<group>";
@@ -322,15 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Reali-ChatDemoUITests-checkManifestLockResult.txt",
 			);
@@ -344,15 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Reali-ChatDemo-checkManifestLockResult.txt",
 			);
@@ -366,15 +372,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Reali-ChatDemoTests-checkManifestLockResult.txt",
 			);
@@ -388,18 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Reali-ChatDemo/Pods-Reali-ChatDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +415,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				016FD061212C252C00E9984A /* ViewController.swift in Sources */,
+				01489BC8212D7E8A00D117F6 /* MessagesController.swift in Sources */,
 				016FD05F212C252C00E9984A /* AppDelegate.swift in Sources */,
+				01489BC6212D602A00D117F6 /* FirebaseWrapper.swift in Sources */,
 				016FD090212C2BA300E9984A /* MessagesDataSet.swift in Sources */,
 				016FD092212C58D200E9984A /* MessageTableViewCell.swift in Sources */,
 				016FD08E212C260E00E9984A /* Message.swift in Sources */,

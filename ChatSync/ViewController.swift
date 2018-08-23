@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var messagesTableView: UITableView!
+    
     var messageController: MessagesController!
     var messagesDataSource = [[Message]]()
     
@@ -23,11 +24,37 @@ class ViewController: UIViewController {
         
         self.messageController = MessagesController()
         self.messageController.startObserving(self)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+private extension ViewController {
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
+                return
+        }
+        
+        DispatchQueue.main.async {
+            let keyBoardRect = keyboardFrame.cgRectValue
+            let currentInset = self.view.safeAreaInsets.bottom
+            self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, keyBoardRect.height - currentInset, 0)
+        }
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        DispatchQueue.main.async {
+            let currentInset = self.view.safeAreaInsets.bottom
+            self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+            self.view.layoutIfNeeded()
+        }
+
     }
 }
 
@@ -70,5 +97,21 @@ extension ViewController: ConversationDelegate {
                 self.messagesTableView.scrollToRow(at: IndexPath(row: lastSectionSize - 1, section: allMessages.count - 1), at: .bottom, animated: true)
             }
         }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let content = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !content.isEmpty {
+            let now = Date().timeIntervalSince1970
+            let newMessage = Message(now.description.replacingOccurrences(of: ".", with: "_"), timestamp: now, sender: "SENDER_ID_xxx", content: content)
+            self.messageController.send(newMessage)
+        }
+        textField.endEditing(true)
+        return true
     }
 }

@@ -34,8 +34,7 @@ class FirebaseProvider: ConversationProvider {
     }
     
     func send(_ message: Message) {
-        self.rootRef.child(message.id).setValuesForKeys(message.dictionary())
-        
+        self.rootRef.child(message.id).setValue(message.dictionary())
     }
     
     func fetch(_ from: TimeInterval, to: TimeInterval) {

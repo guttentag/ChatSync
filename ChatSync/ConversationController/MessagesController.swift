@@ -52,7 +52,7 @@ extension MessagesController: ConversationController {
     }
     
     func send(_ message: Message) {
-        
+        self.firebaseProvider.send(message)
     }
     
     var allMessages: [[Message]] {

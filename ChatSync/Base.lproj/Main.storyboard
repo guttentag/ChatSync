@@ -14,16 +14,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reali_ChatDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatSync" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pgF-af-PZO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCellIdentifier" rowHeight="94" id="ctY-we-uiy" customClass="MessageTableViewCell" customModule="Reali_ChatDemo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCellIdentifier" rowHeight="94" id="ctY-we-uiy" customClass="MessageTableViewCell" customModule="ChatSync" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctY-we-uiy" id="irE-0C-aWQ">
@@ -83,13 +83,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-uc-WWT">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUP-UE-tP9">
+                                        <rect key="frame" x="16" y="15" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gHy-YP-iVJ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8390544041450777" green="0.8390544041450777" blue="0.8390544041450777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gUP-UE-tP9" firstAttribute="leading" secondItem="4WU-uc-WWT" secondAttribute="leading" constant="16" id="Cdx-rH-ggg"/>
+                                    <constraint firstItem="gUP-UE-tP9" firstAttribute="top" secondItem="4WU-uc-WWT" secondAttribute="top" constant="15" id="T6p-Kv-4cx"/>
+                                    <constraint firstAttribute="trailing" secondItem="gUP-UE-tP9" secondAttribute="trailing" constant="16" id="X6F-as-oFJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="gUP-UE-tP9" secondAttribute="bottom" constant="15" id="xpc-aV-s42"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4WU-uc-WWT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ox-aA-0d8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4WU-uc-WWT" secondAttribute="trailing" id="9Ps-Hq-lb7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4WU-uc-WWT" secondAttribute="bottom" id="Ij3-LT-rPx"/>
                             <constraint firstItem="pgF-af-PZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JK6-zW-ddY"/>
                             <constraint firstItem="pgF-af-PZO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QB3-p1-A0j"/>
+                            <constraint firstItem="4WU-uc-WWT" firstAttribute="top" secondItem="pgF-af-PZO" secondAttribute="bottom" id="RS1-G8-7Uz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgF-af-PZO" secondAttribute="trailing" id="VKy-2b-u08"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgF-af-PZO" secondAttribute="bottom" id="qak-Jn-dmc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

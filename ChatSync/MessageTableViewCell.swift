@@ -15,7 +15,25 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet private weak var contentLabel: UILabel!
     @IBOutlet private weak var senderLabel: UILabel!
     @IBOutlet private weak var timestampLabel: UILabel!
+    
+    let dateFormatter = DateFormatter()
 
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.commonInit()
+    }
+    
+    private func commonInit() {
+        self.dateFormatter.dateFormat = "hh:mm"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +50,8 @@ class MessageTableViewCell: UITableViewCell {
     func set(_ message: Message) {
         self.contentLabel.text = message.content
         self.senderLabel.text = message.senderId
-        self.timestampLabel.text = message.timestamp.description
+        let date = Date(timeIntervalSince1970: message.timestamp)
+        self.timestampLabel.text = self.dateFormatter.string(from: date)
     }
 
 }

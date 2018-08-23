@@ -36,6 +36,15 @@ class Message: NSObject {
         
         self.init(idString, timestamp: time, sender: sender, content: message)
     }
+    
+    func dictionary() -> Dictionary<String,Any> {
+        return [
+            "id": self.id,
+            "timestamp": self.timestamp,
+            "sender": self.senderId,
+            "content": self.content
+        ]
+    }
 }
 
 extension Message: Comparable {

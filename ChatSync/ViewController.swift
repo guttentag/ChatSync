@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         self.messagesTableView.allowsSelection = false
         self.messagesTableView.dataSource = self
         
-        self.messageController = MessagesController(self)
-        self.messageController.startObserving()
+        self.messageController = MessagesController()
+        self.messageController.startObserving(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,13 +61,13 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: MessagesDateDelegate {
-    func messagesData(_ messages: [[Message]]) {
+extension ViewController: ConversationDelegate {
+    func conversation(_ allMessages: [[Message]]) {
         DispatchQueue.main.async {
-            self.messagesDataSource = messages
+            self.messagesDataSource = allMessages
             self.messagesTableView.reloadData()
-            if let lastSectionSize = messages.last?.count, lastSectionSize > 0 {
-                self.messagesTableView.scrollToRow(at: IndexPath(row: lastSectionSize - 1, section: messages.count - 1), at: .bottom, animated: true)
+            if let lastSectionSize = allMessages.last?.count, lastSectionSize > 0 {
+                self.messagesTableView.scrollToRow(at: IndexPath(row: lastSectionSize - 1, section: allMessages.count - 1), at: .bottom, animated: true)
             }
         }
     }

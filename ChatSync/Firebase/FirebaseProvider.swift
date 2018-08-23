@@ -1,5 +1,5 @@
 //
-//  FirebaseWrapper.swift
+//  FirebaseProvider.swift
 //  ChatSync
 //
 //  Created by Eran Guttentag on 22/08/2018.
@@ -9,19 +9,19 @@
 import FirebaseDatabase
 import os
 
-protocol FirebaseWrapperDelegate: class {
-    func firebaseWrapper(_ message: Message)
-}
-
-class FirebaseWrapper {
+class FirebaseProvider: ConversationProvider {
+    var allMessages: [[Message]] {
+        return []
+    }
+    
     private let rootRef: DatabaseReference
-    private var delegate: FirebaseWrapperDelegate?
+    private var delegate: ConversationProviderDelegate?
     
     init() {
         self.rootRef = Database.database().reference()
     }
     
-    func set(_ delegate: FirebaseWrapperDelegate) {
+    func set(_ delegate: ConversationProviderDelegate) {
         self.delegate = delegate
         self.rootRef.observe(DataEventType.childAdded) { (snapshot) in
             guard let rawData = snapshot.value as? [String: Any], let message = Message(rawData) else {
@@ -29,7 +29,20 @@ class FirebaseWrapper {
                 return
             }
             
-            self.delegate?.firebaseWrapper(message)
+            self.delegate?.conversationProvider(message)
         }
+    }
+    
+    func send(_ message: Message) {
+        self.rootRef.child(message.id).setValuesForKeys(message.dictionary())
+        
+    }
+    
+    func fetch(_ from: TimeInterval, to: TimeInterval) {
+        
+    }
+    
+    func fetch(_ lastN: Int) {
+        
     }
 }
